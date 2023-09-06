@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #e1e9ff;
+    display: flex;
+    justify-content: center;
+    .card {
+        margin: 70px 0;
+        width: 380px;
+        text-align: center;
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+        > img {
+            max-width: 100%;
+        }
+        .information {
+            padding: 15px 25px;
+            h1 {
+                font-size: 25px;
+                color: hsl(223, 47%, 23%);
+                font-weight: 900;
+            }
+            p {
+                color: hsl(224, 23%, 55%);
+                margin: 15px 0;
+            }
+            .plan {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 15px 0;
+                background-color: hsl(225, 100%, 98%);
+                padding: 15px 0;
+                border-radius: 10px;
+                .details {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-left: -30px;
+                    span {
+                        color: hsl(224, 23%, 55%);
+                    }
+                }
+                a {
+                    color: hsl(245, 75%, 52%);
+                    font-weight: bold;
+                }
+            }
+            .btns {
+                display: flex;
+                flex-direction: column;
+                button:nth-child(1) {
+                    margin: 10px 0;
+                }
+                button {
+                    padding: 12px;
+                    border: none;
+                    font-weight: 700;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+                .proceed {
+                    border-radius: 10px;
+                    background-color: hsl(245, 75%, 52%);
+                    color: white;
+                    box-shadow: 0px 15px 10px hsl(210, 2%, 82%);
+                }
+                .cancel {
+                    background-color: transparent;
+                    color: hsl(224, 23%, 55%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        background-image: url(./images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        .card {
+            width: 320px;
+            margin: 40px 10px !important;
+            .information {
+                .plan {
+                    .details {
+                        margin-left: 0 !important;
+                        h3 {
+                            font-size: 18px !important;
+                        }
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
